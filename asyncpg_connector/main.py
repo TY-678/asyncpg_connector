@@ -9,12 +9,13 @@ class AsyncpgConnector:
     def __init__(self, connect_config: Union[ConnectorConfig, dict]):
         if isinstance(connect_config, dict):
             self.connect_config = ConnectorConfig(**connect_config)
-        self.connect_config = connect_config
+        else:
+            self.connect_config = connect_config
         self.conn = None
 
     async def __aenter__(self):
         try:
-            self.conn = await asyncpg.connect(**self.connect_config)
+            self.conn = await asyncpg.connect(**self.connect_config.model_dump())
             return self
         except Exception as e:
             raise DatabaseConnectionError(f"Database connection failed:{e}")

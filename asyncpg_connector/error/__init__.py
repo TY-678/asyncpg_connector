@@ -1,1 +1,1 @@
-from error_models import DatabaseConnectionError
+from asyncpg_connector.error.error_models import DatabaseConnectionError

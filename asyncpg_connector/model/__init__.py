@@ -1,1 +1,1 @@
-from models import ConnectorConfig
+from asyncpg_connector.model.models import ConnectorConfig

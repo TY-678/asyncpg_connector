@@ -1,3 +1,1 @@
 from asyncpg_connector.main import AsyncpgConnector
-from asyncpg_connector.error import DatabaseConnectionError
-from asyncpg_connector.model import ConnectorConfig
