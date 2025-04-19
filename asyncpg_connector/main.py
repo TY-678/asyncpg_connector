@@ -1,10 +1,14 @@
 import asyncio
 import asyncpg
-from asyncpg_connector.error.error_models import DatabaseConnectionError
+from typing import Union
+from asyncpg_connector.error import DatabaseConnectionError
+from asyncpg_connector.model import ConnectorConfig
 
 
 class AsyncpgConnector:
-    def __init__(self, connect_config: dict):
+    def __init__(self, connect_config: Union[ConnectorConfig, dict]):
+        if isinstance(connect_config, dict):
+            self.connect_config = ConnectorConfig(**connect_config)
         self.connect_config = connect_config
         self.conn = None
 

@@ -6,8 +6,9 @@ authors = ["TY <tyyyy66@icloud.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<4.0"
+python = ">=3.9,<4.0"
 asyncpg = "^0.30.0"
+pydantic = "^2.11.3"
 
 
 [build-system]
