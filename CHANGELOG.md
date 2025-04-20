@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.1] - 2025-04-20
+### Added
+- Add basic usage example in README
+
+
 ## [0.1.1] - 2025-04-19
 ### Added
 - Add `ConnectorConfig` model for initializing config
